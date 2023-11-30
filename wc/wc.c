@@ -33,7 +33,7 @@ int read_file(char name[]) {
         line_length = strlen(buffer);
 
         if (buffer[line_length - 1] != '\n' && !feof(file)) {
-            buffer_size *= 2;
+            buffer_size *= 3;
             buffer = (char *)realloc(buffer, buffer_size);
 
             if (buffer == NULL) {
